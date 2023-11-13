@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:koto/screens/pages/home_pages.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({super.key});
@@ -10,7 +11,7 @@ class IndexPage extends StatefulWidget {
 class _IndexPageState extends State<IndexPage> {
   int _indexPage = 0;
   final List<Widget> _pagesList = const [
-    Placeholder(),
+    HomePage(),
     Placeholder(),
     Placeholder(),
     Placeholder(),
@@ -26,7 +27,6 @@ class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: _pagesList[_indexPage],
       bottomNavigationBar: BottomNavigationBar(
         selectedIconTheme: IconThemeData(color: Theme.of(context).primaryColor),
